@@ -1,28 +1,6 @@
 import './App.css';
-import { useState } from 'react';
+import Box from './Box.js';
 
-function Box() {
-  const [color, setColor] = useState("#CCC");
-
-  const rando = () => {
-    return Math.floor(Math.random() * 256);
-  }
-  const handleHover = () => {
-    const randomColor = `rgb(${rando()}, ${rando()}, ${rando()})`
-    setColor(randomColor);
-  }
-
-  return (
-    <div
-      onMouseEnter={handleHover}
-      className="box"
-      style={{
-        backgroundColor: color
-      }}
-    >
-    </div>
-  )
-}
 function App() {
   return (
     <div className="boxen">
